@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parent_Suite"  parallel="true">
+    <suite-files >
+        <suite-file path="chrome.xml"> </suite-file>
+        <suite-file path="firefox.xml"> </suite-file>
+    </suite-files>
+</suite>

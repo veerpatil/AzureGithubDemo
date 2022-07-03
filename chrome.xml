@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Extent Report">
+    <listeners>
+        <listener class-name="ExtentReportListener"/>
+    </listeners>
+    <test name="Sample Test Chrome" preserve-order="true">
+        <parameter name="browser" value="Chrome"/>
+       <classes>
+           <class name="MySampleTest"></class>
+       </classes>
+    </test>
+
+</suite>

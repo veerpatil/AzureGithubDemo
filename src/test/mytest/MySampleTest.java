@@ -1,10 +1,14 @@
 import com.aventstack.extentreports.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
+import main.java.ExtentReportInit;
+import main.java.ExtentTestManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+import test.mytest.ExtentReportListener;
 
 public class MySampleTest {
 
@@ -16,8 +20,13 @@ public class MySampleTest {
     {
         if(browser.equals("Chrome")) {
             DriverManagerType chrome = DriverManagerType.CHROME;
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-gpu");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--headless");
             WebDriverManager.getInstance(chrome).setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
         }
         else if(browser.equals("Firefox"))
         {

@@ -1,3 +1,5 @@
+package main.java;
+
 import com.aventstack.extentreports.ExtentTest;
 
 public class ExtentTestManager {

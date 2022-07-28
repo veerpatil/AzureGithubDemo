@@ -5,7 +5,7 @@
         <listener class-name="test.mytest.ExtentReportListener"/>
     </listeners>
     <test name="Sample Test Chrome" preserve-order="true">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Docker"/>
        <classes>
            <class name="MySampleTest"></class>
        </classes>
